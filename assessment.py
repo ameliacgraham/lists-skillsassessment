@@ -56,7 +56,7 @@ def print_indices(items):
     """
 
 # Tried this and found that it worked with a list that didn't have duplicate
-#items. Realized couldn't use .index because the duplicate items had the same ID
+#items. Realized couldn't use .index because the duplicate items had the same memory ID
     # for thing in items:
     #     item_index = str(items.index(thing))
     #     print id(thing)

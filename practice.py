@@ -56,8 +56,8 @@ def n_long_words(words, n):
         >>> n_long_words(["I", "like", "apples", "bananas", "you"], 5)
         ['apples', 'bananas']
     """
-
-    return ['the wrong thing']
+    words = [word for word in words if len(word) > n]
+    return words
 
 
 def smallest_int(numbers):
@@ -78,8 +78,10 @@ def smallest_int(numbers):
         >>> smallest_int([]) is None
         True
     """
-
-    return 100
+    numbers = sorted(numbers)
+    if numbers == []:
+        return None
+    return numbers[0]
 
 
 def largest_int(numbers):
@@ -100,8 +102,10 @@ def largest_int(numbers):
         >>> largest_int([]) is None
         True
     """
-
-    return 0
+    numbers = sorted(numbers)
+    if numbers == []:
+        return None
+    return numbers[-1]
 
 
 def halvesies(numbers):
@@ -118,8 +122,8 @@ def halvesies(numbers):
         >>> halvesies([1, 5])
         [0.5, 2.5]
     """
-
-    return []
+    num_list = [float(number) / 2 for number in numbers]
+    return num_list
 
 
 def word_lengths(words):
@@ -131,8 +135,8 @@ def word_lengths(words):
         [5, 3, 5, 4]
     """
 
-    return []
-
+    length = [len(word) for word in words]
+    return length
 
 def sum_numbers(numbers):
     """Return the sum of all of the numbers in the list.
@@ -151,7 +155,10 @@ def sum_numbers(numbers):
         0
     """
 
-    return None
+    sum_of_numbers = 0
+    for number in numbers:
+        sum_of_numbers += number
+    return sum_of_numbers
 
 
 def mult_numbers(numbers):
@@ -174,7 +181,15 @@ def mult_numbers(numbers):
         1
     """
 
-    return None
+    product_of_numbers = 1
+    for number in numbers:
+        if numbers == []:
+            product_of_numbers = 1
+        elif number == 0:
+            product_of_numbers = 0
+        else:
+            product_of_numbers *= number
+    return product_of_numbers
 
 
 def join_strings(words):
