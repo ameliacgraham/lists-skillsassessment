@@ -48,9 +48,16 @@ def print_indices(items):
     
     """
 
-    for thing in items:
-        print str(items.index(thing)) + " " + thing
+# Tried this and found that it worked with a list that didn't have duplicate
+#items. Realized couldn't use .index because the duplicate items had the same ID
+    # for thing in items:
+    #     item_index = str(items.index(thing))
+    #     print id(thing)
+    #     print item_index + " " + thing
 
+    for index in range(len(items)):
+        item = items[index]
+        print str(index) + " " + item
 
 def foods_in_common(foods1, foods2):
     """Find foods in common.
@@ -97,7 +104,7 @@ def every_other_item(items):
        ['you', 'are', 'good', 'at', 'code']
     """
 
-    return ['the wrong thing']
+    return items[::2]
 
 
 def largest_n_items(items, n):
@@ -121,8 +128,10 @@ def largest_n_items(items, n):
         >>> largest_n_items([3, 3, 3, 2, 1], 2)
         [3, 3]
     """
-
-    return []
+    sorted_item_list = sorted(items)
+    if n == 0:
+        return []
+    return sorted_item_list[-n:]
 
 
 #####################################################################
