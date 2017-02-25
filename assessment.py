@@ -6,6 +6,9 @@ you run this file.
 
 
 def all_odd(numbers):
+    """Takes in a list of numbers and returns only the odd numbers
+    """
+
     """Return a list of only the odd numbers in the input list.
 
     For example::
@@ -23,6 +26,10 @@ def all_odd(numbers):
 
 
 def print_indices(items):
+    """Takes in a list of items and returns each item 
+        along with the index of that item
+    """
+
     """Print index of each item in list, followed by item itself.
 
     Do this without using a "counting variable" --- that is, don't
@@ -60,6 +67,9 @@ def print_indices(items):
         print str(index) + " " + item
 
 def foods_in_common(foods1, foods2):
+    """Compares items in two lists and returns items in common
+    """
+
     """Find foods in common.
 
     Given 2 lists of foods, return the items that are in common
@@ -91,6 +101,9 @@ def foods_in_common(foods1, foods2):
 
 
 def every_other_item(items):
+    """Takes in a list and returns every other item.
+    """
+
     """Return every other item in `items`, starting at first item.
 
     For example::
@@ -108,6 +121,10 @@ def every_other_item(items):
 
 
 def largest_n_items(items, n):
+    """Takes a list of integers and an integer ('n'). 
+        Sorts the list and returns the last "n" digits.
+    """
+
     """Return the `n` largest integers in list, in ascending order.
 
     You can assume that `n` will be less than the length of the list.
