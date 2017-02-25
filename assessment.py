@@ -17,7 +17,9 @@ def all_odd(numbers):
         []
     """
 
-    return ['the wrong thing']
+    odd_numbers = [number for number in numbers if  number % 2 != 0]
+    return odd_numbers
+
 
 
 def print_indices(items):
