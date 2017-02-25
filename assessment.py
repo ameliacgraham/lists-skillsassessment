@@ -79,8 +79,8 @@ def foods_in_common(foods1, foods2):
         []
 
     """
-
-    return ['the wrong thing']
+    common_foods = [food for food in foods1 if food in foods2]
+    return sorted(common_foods)
 
 
 def every_other_item(items):
