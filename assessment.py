@@ -49,7 +49,7 @@ def print_indices(items):
     """
 
     for thing in items:
-        print items[thing]
+        print str(items.index(thing)) + " " + thing
 
 
 def foods_in_common(foods1, foods2):
