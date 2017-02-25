@@ -17,7 +17,7 @@ def all_odd(numbers):
         []
     """
 
-    odd_numbers = [number for number in numbers if  number % 2 != 0]
+    odd_numbers = [number for number in numbers if number % 2 != 0]
     return odd_numbers
 
 
@@ -48,7 +48,8 @@ def print_indices(items):
     
     """
 
-    print "Nothing at all"
+    for thing in items:
+        print items[thing]
 
 
 def foods_in_common(foods1, foods2):
