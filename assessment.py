@@ -21,7 +21,6 @@ def all_odd(numbers):
     return odd_numbers
 
 
-
 def print_indices(items):
     """Print index of each item in list, followed by item itself.
 
