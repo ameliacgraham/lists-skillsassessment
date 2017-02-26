@@ -49,7 +49,7 @@ def print_indices(items):
     """
 
 # Tried this and found that it worked with a list that didn't have duplicate
-#items. Realized couldn't use .index because the duplicate items had the same memory ID
+# items. Realized couldn't use .index because the duplicate items had the same memory ID
     # for thing in items:
     #     item_index = str(items.index(thing))
     #     print id(thing)
@@ -86,6 +86,9 @@ def foods_in_common(foods1, foods2):
         []
 
     """
+    # I chose to do this in a list because the foods need to be sorted and
+    # because I wanted to use list comprehension. I could have used a tuple
+    # if I didn't want to use comprehension since the two lists don't change. 
     common_foods = [food for food in foods1 if food in foods2]
     return sorted(common_foods)
 
